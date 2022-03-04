@@ -7,7 +7,8 @@ package javaapplication30;
 
 /**
  *
- * @author Diurno
+ * @author Lucia Cristiani
+ * @version 1.0
  */
 public class Fecha {
 
@@ -16,17 +17,22 @@ public class Fecha {
     private int año;
 
     //Constructor por defecto
+    
     public Fecha() {
     }
 
     //Constructor con parámetros
+    /** @param dia
+     * @param mes
+     * @param año 
+     */
     public Fecha(int dia, int mes, int año) {
         this.dia = dia;
         this.mes = mes;
         this.año = año;
     }
 
-    //Métodos get y set
+    //Métodos getters y setters
     public void setDia(int d) {
         dia = d;
     }
@@ -38,15 +44,18 @@ public class Fecha {
     public void setAño(int a) {
         año = a;
     }
-
+    //Método getter
+    //**@return dia
     public int getDia() {
         return dia;
     }
-
+    //Método getter
+    //**@return mes
     public int getMes() {
         return mes;
     }
-
+    //Método getter
+    //**@return año
     public int getAño() {
         return año;
     }
@@ -95,21 +104,21 @@ public class Fecha {
         }
     }
 
-    //Método para comprobar si la fecha es mayor que la que se recibe                                             
-    public boolean esMayorQue(Fecha f){
-        if(año > f.año) {
+    //Método para comprobar si la fecha es mayor que la que se recibe  
+    //**@param f
+    
+    public boolean esMayorQue(Fecha f) {
+        if (año > f.año) {
             return true;
-        }
-        else if(año==f.año && mes > f.mes) {
+        } else if (año == f.año && mes > f.mes) {
             return true;
-        }
-        else if(año==f.año && mes == f.mes && dia > f.dia) {
+        } else if (año == f.año && mes == f.mes && dia > f.dia) {
             return true;
         }
         return false;
     }
-   
-    //Método para mostrar la fecha
+
+    //Método toString para mostrar la fecha
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

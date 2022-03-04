@@ -1,13 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package javaapplication30;
 
 /**
  *
- * @author Diurno
+ * @author Lucia Cristiani
+ * @version 1.0
  */
 import java.util.Calendar;
 
@@ -93,12 +90,12 @@ public class Persona {
         int diaActual = hoy.get(Calendar.DAY_OF_MONTH);
         if (añoActual - fechaNacimiento.getAño() > 18) {
             return true;
-        } else if (añoActual - fechaNacimiento.getAño() == 18 &&
-                      mesActual > fechaNacimiento.getMes()) {
+        } else if (añoActual - fechaNacimiento.getAño() == 18
+                && mesActual > fechaNacimiento.getMes()) {
             return true;
-        } else if (añoActual - fechaNacimiento.getAño() == 18 &&
-                     mesActual == fechaNacimiento.getMes() &&
-                     diaActual >= fechaNacimiento.getDia()) {
+        } else if (añoActual - fechaNacimiento.getAño() == 18
+                && mesActual == fechaNacimiento.getMes()
+                && diaActual >= fechaNacimiento.getDia()) {
             return true;
         }
         return false;

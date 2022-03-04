@@ -1,4 +1,3 @@
-
 package javaapplication30;
 
 import java.util.ArrayList;
@@ -6,15 +5,15 @@ import java.util.Scanner;
 
 /**
  *
- * @author Diurno
+ * @author Lucia
+ * @version 1.0
  */
 public class JavaApplication30 {
 
     /**
      * @param args the command line arguments
      */
-  
-  //se crea el ArrayList de Personas
+    //se crea el ArrayList de Personas
     static ArrayList<Persona> personas = new ArrayList();
     static Scanner sc = new Scanner(System.in);
 
@@ -28,14 +27,14 @@ public class JavaApplication30 {
             //se muestra la persona de mayor edad
             System.out.println("\nPersona de mayor edad: ");
             System.out.println(personaMayorEdad());
-            
+
             //se muestra el número de personas mayores de edad
             System.out.println("\nNúmero de personas mayores de edad : "
-                                          + personasMayoresDeEdad());         
+                    + personasMayoresDeEdad());
         }
     }
 
-    //Método que lee los datos de cada persona y las añade al ArrayList
+    //Método que lee los datos de cada persona y las añade al ArrayList personas
     public static void leerPersonas() {
 
         String nombre, direccion, ciudad;
@@ -47,7 +46,7 @@ public class JavaApplication30 {
             System.out.print("Número de personas? ");
             N = sc.nextInt();
         } while (N < 0);
-        sc.nextLine(); //limpiar el buffer de entrada
+        sc.nextLine();
 
         for (i = 1; i <= N; i++) {
             System.out.println("Persona " + i);
@@ -61,7 +60,7 @@ public class JavaApplication30 {
                 mes = sc.nextInt();
                 System.out.print("Año: ");
                 año = sc.nextInt();
-                fecha = new Fecha(dia, mes,año);
+                fecha = new Fecha(dia, mes, año);
             } while (!fecha.fechaCorrecta());
 
             sc.nextLine();
@@ -86,7 +85,7 @@ public class JavaApplication30 {
         }
     }
 
-    //Mostrar todas las personas
+    //Método para mostrar todas las personas
     public static void mostrar() {
         for (int i = 0; i < personas.size(); i++) {
             System.out.println(personas.get(i));
@@ -103,24 +102,24 @@ public class JavaApplication30 {
     public static Persona personaMayorEdad() {
         Persona aux = personas.get(0);
         for (int i = 1; i < personas.size(); i++) {
-            if (personas.get(i).getFechaNacimiento().esMayorQue(aux.getFechaNacimiento())) {                      
+            if (personas.get(i).getFechaNacimiento().esMayorQue(aux.getFechaNacimiento())) {
                 aux = personas.get(i);
             }
         }
         return aux;
     }
 
-    //Calcula y devuelve el número de personas que viven
-    //en la ciudad que se recibe como parámetro
-    public static int cuantasPersonasVivenEn(String ciudad) {
-        int cont = 0;
-        for (int i = 0; i < personas.size(); i++) {
-            if (personas.get(i).getCiudad().equalsIgnoreCase(ciudad)) {
-                cont++;
-            }
-        }
-        return cont;
-    }
+//    //Calcula y devuelve el número de personas que viven
+//    //en la ciudad que se recibe como parámetro
+//    public static int cuantasPersonasVivenEn(String ciudad) {
+//        int cont = 0;
+//        for (int i = 0; i < personas.size(); i++) {
+//            if (personas.get(i).getCiudad().equalsIgnoreCase(ciudad)) {
+//                cont++;
+//            }
+//        }
+//        return cont;
+//    }
 
     //Calcula y devuelve el número de personas mayores de edad
     public static int personasMayoresDeEdad() {
@@ -132,4 +131,4 @@ public class JavaApplication30 {
         }
         return cont;
     }
-} //Fin de la Clase Principal
+}
