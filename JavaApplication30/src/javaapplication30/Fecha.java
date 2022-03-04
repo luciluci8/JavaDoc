@@ -16,12 +16,16 @@ public class Fecha {
     private int mes;
     private int año;
 
-    //Constructor por defecto
+    //**
+    /*Constructor por defecto
+    
+    */
     
     public Fecha() {
     }
 
-    //Constructor con parámetros
+    //**
+    /*Constructor con parámetros
     /** @param dia
      * @param mes
      * @param año 
@@ -32,7 +36,10 @@ public class Fecha {
         this.año = año;
     }
 
-    //Métodos getters y setters
+    //**
+    /*Métodos getters y setters
+    
+    */
     public void setDia(int d) {
         dia = d;
     }
@@ -44,8 +51,11 @@ public class Fecha {
     public void setAño(int a) {
         año = a;
     }
-    //Método getter
-    //**@return dia
+    //**
+    /*Método getter
+    /*@return dia
+    */
+    
     public int getDia() {
         return dia;
     }
@@ -60,7 +70,11 @@ public class Fecha {
         return año;
     }
 
-    //Comprobar si la fecha es correcta
+    //**
+    /*Comprobar si la fecha es correcta
+    
+    */
+   
     public boolean fechaCorrecta() {
         boolean diaCorrecto, mesCorrecto, añoCorrecto;
         añoCorrecto = año > 0;
@@ -85,8 +99,11 @@ public class Fecha {
         return diaCorrecto && mesCorrecto && añoCorrecto;
     }
 
-    //Comprobar si el año es bisiesto
-    //Método privado invocado desde el método fechaCorrecta
+    //**
+    /*Comprobar si el año es bisiesto
+    /*Método privado invocado desde el método fechaCorrecta
+    */
+    
     private boolean esBisiesto() {
         return (año % 4 == 0 && año % 100 != 0 || año % 400 == 0);
     }
@@ -104,8 +121,12 @@ public class Fecha {
         }
     }
 
-    //Método para comprobar si la fecha es mayor que la que se recibe  
-    //**@param f
+    //**
+    /*Método para comprobar si la fecha es mayor que la que se recibe 
+     /*@param f
+    */ 
+    
+  
     
     public boolean esMayorQue(Fecha f) {
         if (año > f.año) {
@@ -118,7 +139,11 @@ public class Fecha {
         return false;
     }
 
-    //Método toString para mostrar la fecha
+    //**
+    /*Método toString para mostrar la fecha
+    
+    */
+    
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -136,4 +161,4 @@ public class Fecha {
         sb.append(año);
         return sb.toString();
     }
-} //Final de la Clase Fecha
+} 

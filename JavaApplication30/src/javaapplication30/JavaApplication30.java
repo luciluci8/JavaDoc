@@ -18,7 +18,7 @@ public class JavaApplication30 {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        //se leen las personas y se introducen en el ArrayList
+        
         leerPersonas();
         if (numeroDePersonas() > 0) {
             //se muestran todas las personas introducidas
@@ -34,7 +34,10 @@ public class JavaApplication30 {
         }
     }
 
-    //Método que lee los datos de cada persona y las añade al ArrayList personas
+    //**
+    /*Método que lee los datos de cada persona y las añade al ArrayList personas
+    
+    */
     public static void leerPersonas() {
 
         String nombre, direccion, ciudad;
@@ -85,20 +88,30 @@ public class JavaApplication30 {
         }
     }
 
-    //Método para mostrar todas las personas
+    //**
+    /*Método para mostrar todas las personas
+    
+    */
     public static void mostrar() {
         for (int i = 0; i < personas.size(); i++) {
             System.out.println(personas.get(i));
         }
     }
 
-    //Devuelve el número de personas que contiene el array
+    //**
+    /*Devuelve el número de personas que contiene el array
+    
+    */
     public static int numeroDePersonas() {
         return personas.size();
     }
 
-    //Devuelve la persona de mayor edad
-    //En este método se utiliza el método esMayorQue() añadido a la clase Fecha
+    //**
+    /*Devuelve la persona de mayor edad
+    /*En este método se utiliza el método esMayorQue() añadido a la clase Fecha
+    //**@return aux
+    
+    */
     public static Persona personaMayorEdad() {
         Persona aux = personas.get(0);
         for (int i = 1; i < personas.size(); i++) {
@@ -109,19 +122,12 @@ public class JavaApplication30 {
         return aux;
     }
 
-//    //Calcula y devuelve el número de personas que viven
-//    //en la ciudad que se recibe como parámetro
-//    public static int cuantasPersonasVivenEn(String ciudad) {
-//        int cont = 0;
-//        for (int i = 0; i < personas.size(); i++) {
-//            if (personas.get(i).getCiudad().equalsIgnoreCase(ciudad)) {
-//                cont++;
-//            }
-//        }
-//        return cont;
-//    }
 
-    //Calcula y devuelve el número de personas mayores de edad
+    //**
+    /*Calcula y devuelve el número de personas mayores de edad
+    //**return cont
+    
+    */
     public static int personasMayoresDeEdad() {
         int cont = 0;
         for (int i = 0; i < personas.size(); i++) {

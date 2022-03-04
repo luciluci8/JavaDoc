@@ -16,12 +16,17 @@ public class Persona {
     private String ciudad;
     private Fecha fechaNacimiento;
 
-    //Constructor por defecto
+    //**
+    /*Constructor por defecto
+    */
     public Persona() {
         fechaNacimiento = new Fecha();
     }
 
-    //Métodos get y set
+    //**
+    /*Métodos getters y setters
+    
+    */
     public String getNombre() {
         return nombre;
     }
@@ -64,7 +69,10 @@ public class Persona {
         fechaNacimiento.setAño(fecha.getAño());
     }
 
-    //Método para mostrar los datos de las personas según el formato pedido
+    //**
+    /*Método para mostrar los datos de las personas según el formato pedido
+    
+    */
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -82,7 +90,10 @@ public class Persona {
         return sb.toString();
     }
 
-    //Método que comprueba si la persona es mayor de edad
+    //**
+    /*Método que comprueba si la persona es mayor de edad
+    
+    */
     public boolean esMayorDeEdad() {
         Calendar hoy = Calendar.getInstance();
         int añoActual = hoy.get(Calendar.YEAR);
