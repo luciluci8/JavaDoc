@@ -16,15 +16,15 @@ public class Persona {
     private String ciudad;
     private Fecha fechaNacimiento;
 
-    //**
-    /*Constructor por defecto
+    /**
+    * Constructor por defecto
     */
     public Persona() {
         fechaNacimiento = new Fecha();
     }
 
-    //**
-    /*Métodos getters y setters
+    /**
+    * Métodos getters y setters
     
     */
     public String getNombre() {
@@ -69,8 +69,8 @@ public class Persona {
         fechaNacimiento.setAño(fecha.getAño());
     }
 
-    //**
-    /*Método para mostrar los datos de las personas según el formato pedido
+    /**
+    * Método toString para mostrar los datos de las personas según el formato pedido
     
     */
     @Override
@@ -90,8 +90,8 @@ public class Persona {
         return sb.toString();
     }
 
-    //**
-    /*Método que comprueba si la persona es mayor de edad
+    /**
+    * Método que comprueba si la persona es mayor de edad
     
     */
     public boolean esMayorDeEdad() {
@@ -111,4 +111,4 @@ public class Persona {
         }
         return false;
     }
-} //Final de la clase Persona
+} 

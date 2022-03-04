@@ -11,9 +11,10 @@ import java.util.Scanner;
 public class JavaApplication30 {
 
     /**
-     * @param args the command line arguments
+     * @param args the command line arguments 
+     * se crea el ArrayList de Personas
      */
-    //se crea el ArrayList de Personas
+   
     static ArrayList<Persona> personas = new ArrayList();
     static Scanner sc = new Scanner(System.in);
 
@@ -34,8 +35,8 @@ public class JavaApplication30 {
         }
     }
 
-    //**
-    /*Método que lee los datos de cada persona y las añade al ArrayList personas
+    /**
+    * Método que lee los datos de cada persona y las añade al ArrayList personas
     
     */
     public static void leerPersonas() {
@@ -88,8 +89,8 @@ public class JavaApplication30 {
         }
     }
 
-    //**
-    /*Método para mostrar todas las personas
+    /**
+    * Método para mostrar todas las personas
     
     */
     public static void mostrar() {
@@ -98,18 +99,18 @@ public class JavaApplication30 {
         }
     }
 
-    //**
-    /*Devuelve el número de personas que contiene el array
+    /**
+    * Devuelve el número de personas que contiene el array
     
     */
     public static int numeroDePersonas() {
         return personas.size();
     }
 
-    //**
-    /*Devuelve la persona de mayor edad
-    /*En este método se utiliza el método esMayorQue() añadido a la clase Fecha
-    //**@return aux
+    /**
+    * Devuelve la persona de mayor edad
+    * En este método se utiliza el método esMayorQue() añadido a la clase Fecha
+    * @return aux
     
     */
     public static Persona personaMayorEdad() {
@@ -123,9 +124,9 @@ public class JavaApplication30 {
     }
 
 
-    //**
-    /*Calcula y devuelve el número de personas mayores de edad
-    //**return cont
+    /**
+    * Calcula y devuelve el número de personas mayores de edad
+    * return cont
     
     */
     public static int personasMayoresDeEdad() {

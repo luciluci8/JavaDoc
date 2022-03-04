@@ -16,28 +16,28 @@ public class Fecha {
     private int mes;
     private int año;
 
-    //**
-    /*Constructor por defecto
+    /*
+    * Constructor por defecto
     
     */
     
     public Fecha() {
     }
 
-    //**
-    /*Constructor con parámetros
-    /** @param dia
-     * @param mes
-     * @param año 
-     */
+    /**
+    * Constructor con parámetros
+    * @param dia para obtener el día de nacimiento de la persona
+    * @param mes para obtener el mes de nacimiento de la persona
+    * @param año para obtener el año de nacimiento de la persona
+    */
     public Fecha(int dia, int mes, int año) {
         this.dia = dia;
         this.mes = mes;
         this.año = año;
     }
 
-    //**
-    /*Métodos getters y setters
+    /**
+    * Métodos getters y setters
     
     */
     public void setDia(int d) {
@@ -51,28 +51,33 @@ public class Fecha {
     public void setAño(int a) {
         año = a;
     }
-    //**
-    /*Método getter
-    /*@return dia
+    /*
+    * @ return dia devuelve el dia de nacimiento
     */
     
     public int getDia() {
         return dia;
     }
-    //Método getter
-    //**@return mes
+   
+    /**
+     * @return mes devuelve el mes de nacimiento
+     */
     public int getMes() {
         return mes;
     }
-    //Método getter
-    //**@return año
+    // Método getter
+    /**
+     * 
+     * @return año devuelve el año de nacimiento
+     * 
+     */
     public int getAño() {
         return año;
     }
 
-    //**
-    /*Comprobar si la fecha es correcta
     
+    /**
+    * Comprobar si la fecha es correcta
     */
    
     public boolean fechaCorrecta() {
@@ -99,15 +104,17 @@ public class Fecha {
         return diaCorrecto && mesCorrecto && añoCorrecto;
     }
 
-    //**
-    /*Comprobar si el año es bisiesto
-    /*Método privado invocado desde el método fechaCorrecta
+    /**
+    * Comprobar si el año es bisiesto
     */
     
     private boolean esBisiesto() {
         return (año % 4 == 0 && año % 100 != 0 || año % 400 == 0);
     }
 
+    /**
+     *  Calcula el dia siguiente
+     */
     public void diaSiguiente() {
         dia++;
         if (!fechaCorrecta()) {
@@ -121,9 +128,10 @@ public class Fecha {
         }
     }
 
-    //**
-    /*Método para comprobar si la fecha es mayor que la que se recibe 
-     /*@param f
+    /**
+    * Método para comprobar si la fecha es mayor que la que se recibe 
+    * @param f variable tipo Fecha que tiene dentro dia, mes, año
+    * 
     */ 
     
   
@@ -139,8 +147,8 @@ public class Fecha {
         return false;
     }
 
-    //**
-    /*Método toString para mostrar la fecha
+    /**
+    * Método toString para mostrar la fecha
     
     */
     
